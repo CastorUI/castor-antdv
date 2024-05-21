@@ -1,0 +1,20 @@
+{
+  "name": "vue3-antdv-components",
+  "version": "1.0.0",
+  "description": "基于ant-design-vue的vue3组件库",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.polarwin.cn:components/vue3-antdv-components.git"
+  },
+  "keywords": [
+    "vue3",
+    "ant-design-vue",
+    "vitepress"
+  ],
+  "author": "heke",
+  "license": "ISC"
+}
