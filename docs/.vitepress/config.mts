@@ -4,7 +4,13 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: "CastorAntdv",
   description: " Vue3 Component Library Based On AntDedignVue",
+  head: [
+    [
+      'link',{ rel: 'icon', href: '/favicon.ico' }
+    ]
+  ],
   themeConfig: {
+    logo: '/favicon.ico',
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Home', link: '/' },
@@ -22,7 +28,7 @@ export default defineConfig({
     ],
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
+      { icon: 'github', link: 'https://gitlab.polarwin.cn/components/vue3-antdv-components' }
     ]
   }
 })

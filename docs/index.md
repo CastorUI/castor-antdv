@@ -6,6 +6,9 @@ hero:
   name: "CastorAntdv"
   text: "Vue3-antdv-components"
   tagline: My great project tagline
+  image:
+    src: /logo.png
+    alt: Castor3 UI
   actions:
     - theme: brand
       text: Markdown Examples
