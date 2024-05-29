@@ -21,7 +21,8 @@
   "author": "heke",
   "license": "ISC",
   "devDependencies": {
-    "vitepress": "^1.2.2"
+    "vitepress": "^1.2.2",
+    "sass": "1.59.3"
   },
   "dependencies": {
     "@vitepress-demo-preview/component": "^2.3.2",
