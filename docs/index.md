@@ -3,19 +3,19 @@
 layout: home
 
 hero:
-  name: "CastorAntdv"
-  text: "Vue3-antdv-components"
-  tagline: My great project tagline
+  name: Castor3 UI
+  text: 企业级中后组件库
+  tagline: 基于Vue3，二次封装AntDesignVue
   image:
     src: /logo.png
     alt: Castor3 UI
   actions:
     - theme: brand
-      text: Markdown Examples
-      link: /examples/markdown
+      text: 快速开始
+      link: /guide/index
     - theme: alt
-      text: API Examples
-      link: /examples/api
+      text: 组件库
+      link: /components/basic-component1
 
 features:
   - title: Feature A
