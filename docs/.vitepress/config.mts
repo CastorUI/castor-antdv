@@ -1,5 +1,8 @@
 import { DefaultTheme, defineConfig } from 'vitepress';
-import { componentPreview, containerPreview } from '@vitepress-demo-preview/plugin';
+import {
+  componentPreview,
+  containerPreview,
+} from '@vitepress-demo-preview/plugin';
 
 const nav: DefaultTheme.NavItem[] = [
   { text: '指南', link: '/guide/' },
@@ -54,8 +57,22 @@ export default defineConfig({
   title: 'Castor3',
   description: ' Vue3 Component Library Based On AntDedignVue',
   head: [['link', { rel: 'icon', href: '/favicon.ico' }]],
+  lang: 'zh-CN',
+  base: '/',
+  lastUpdated: true,
   themeConfig: {
+    i18nRouting: true,
     logo: '/favicon.ico',
+    lastUpdatedText: '上次更新',
+    returnToTopLabel: '回到顶部',
+    docFooter: {
+      prev: '上一页',
+      next: '下一页',
+    },
+    outline: {
+      level: 'deep', // 右侧大纲标题层级
+      label: '页面导航', // 右侧大纲标题文本配置
+    },
     socialLinks: [
       {
         icon: 'github',
@@ -68,12 +85,12 @@ export default defineConfig({
   markdown: {
     theme: {
       light: 'vitesse-light',
-      dark: 'vitesse-dark'
+      dark: 'vitesse-dark',
     },
     lineNumbers: true,
     config(md) {
-      md.use(componentPreview)
-      md.use(containerPreview)
-    }
-  }
+      md.use(componentPreview);
+      md.use(containerPreview);
+    },
+  },
 });
