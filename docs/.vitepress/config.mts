@@ -1,4 +1,5 @@
 import { DefaultTheme, defineConfig } from 'vitepress';
+import { componentPreview, containerPreview } from '@vitepress-demo-preview/plugin';
 
 const nav: DefaultTheme.NavItem[] = [
   { text: '指南', link: '/guide/' },
@@ -64,4 +65,15 @@ export default defineConfig({
     nav,
     sidebar,
   },
+  markdown: {
+    theme: {
+      light: 'vitesse-light',
+      dark: 'vitesse-dark'
+    },
+    lineNumbers: true,
+    config(md) {
+      md.use(componentPreview)
+      md.use(containerPreview)
+    }
+  }
 });
