@@ -28,7 +28,7 @@
   "dependencies": {
     "@vitepress-demo-preview/component": "^2.3.2",
     "@vitepress-demo-preview/plugin": "^1.2.3",
-    "ant-design-vue": "^4.2.1",
+    "ant-design-vue": "4.2.1",
     "@ant-design/icons-vue": "^6.1.0"
   }
 }

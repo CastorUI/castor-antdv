@@ -24,7 +24,7 @@ const sidebar: DefaultTheme.Sidebar = {
       text: '通用基础组件',
       items: [
         { text: '基础组件 1', link: '/components/basic-component1' },
-        { text: '基础组件 2', link: '/components/basic-component2' },
+        { text: '通用表格', link: '/components/basic-component2' },
       ],
     },
     {

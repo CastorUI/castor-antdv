@@ -3,6 +3,7 @@ import 'ant-design-vue/dist/reset.css';
 import theme from 'vitepress/dist/client/theme-default/index.js';
 import { AntDesignContainer } from '@vitepress-demo-preview/component';
 import '@vitepress-demo-preview/component/dist/style.css';
+import './custom.css';
 
 import Castor3UI from './../../../packages/index';
 
