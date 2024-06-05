@@ -6,7 +6,7 @@ import {
 
 const nav: DefaultTheme.NavItem[] = [
   { text: '指南', link: '/guide/' },
-  { text: '组件', link: '/components/basic-component1' },
+  { text: '组件', link: '/components/common-table' },
   { text: 'VitePress示例', link: '/examples/markdown' },
 ];
 const sidebar: DefaultTheme.Sidebar = {
@@ -23,8 +23,8 @@ const sidebar: DefaultTheme.Sidebar = {
     {
       text: '通用基础组件',
       items: [
-        { text: '基础组件 1', link: '/components/basic-component1' },
-        { text: '通用表格', link: '/components/basic-component2' },
+        { text: '通用表格', link: '/components/common-table' },
+        { text: '通用查询', link: '/components/common-query' },
       ],
     },
     {

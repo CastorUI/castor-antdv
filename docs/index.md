@@ -15,7 +15,7 @@ hero:
       link: /guide/index
     - theme: alt
       text: 组件库
-      link: /components/basic-component1
+      link: /components/common-table
 
 features:
   - title: Feature A
