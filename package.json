@@ -1,6 +1,6 @@
 {
   "name": "@neweratech/castor3-ui",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "基于ant-design-vue的vue3组件库",
   "main": "es/index.js",
   "module": "es/index.js",
@@ -26,6 +26,7 @@
   "author": "heke",
   "license": "ISC",
   "devDependencies": {
+    "@types/node": "^20.14.2",
     "@vitejs/plugin-vue-jsx": "^4.0.0",
     "sass": "1.59.3",
     "vitepress": "^1.2.2"
