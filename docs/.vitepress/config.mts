@@ -25,6 +25,7 @@ const sidebar: DefaultTheme.Sidebar = {
       items: [
         { text: '通用表格', link: '/components/common-table' },
         { text: '通用查询', link: '/components/common-query' },
+        { text: '通用表单', link: '/components/common-form' },
       ],
     },
     {

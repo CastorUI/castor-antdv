@@ -1,11 +1,13 @@
 import { App } from 'vue';
 import CaCommonTable from './CaCommonTable';
 import CaCommonQuery from './CaCommonQuery';
+import CaCommonForm from './CaCommonForm';
 
 // 存储组件列表
 const components = [
   CaCommonTable,
-  CaCommonQuery
+  CaCommonQuery,
+  CaCommonForm
 ];
 
 /**
