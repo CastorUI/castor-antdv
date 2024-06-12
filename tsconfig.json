@@ -125,7 +125,7 @@
     "packages/**/*.vue",
     "types/**/*.d.ts",
     "types/**/*.ts",
-    "vite.config.ts"
-  ],
+    "vite.config.mts"
+, "docs/vite.config.mts"  ],
   "exclude": ["node_modules", "dist", "**/*.js"]
 }
