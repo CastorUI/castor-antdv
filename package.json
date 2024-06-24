@@ -1,6 +1,6 @@
 {
   "name": "@neweratech/castor3-ui",
-  "version": "0.0.7",
+  "version": "1.0.1",
   "description": "基于ant-design-vue的vue3组件库",
   "main": "es/index.js",
   "module": "es/index.js",
@@ -12,7 +12,8 @@
     "docs:build": "vitepress build docs",
     "docs:preview": "vitepress preview docs",
     "build": "vite build",
-    "format": "prettier --write packages/,docs/demos/"
+    "format": "prettier --write packages/,docs/demos/",
+    "npmjs": "npm publish --registry=https://registry.npmjs.org/"
   },
   "repository": {
     "type": "git",
