@@ -1,14 +1,23 @@
 {
-  "name": "vue3-antdv-components",
-  "version": "1.0.0",
+  "name": "@neweratech/castor3-ui",
+  "version": "1.0.1",
   "description": "基于ant-design-vue的vue3组件库",
-  "main": "index.js",
+  "main": "es/index.js",
+  "module": "es/index.js",
+  "files": [
+    "es"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs",
+    "build": "vite build",
+    "format": "prettier --write packages/,docs/demos/",
+    "npmjs": "npm publish --registry=https://registry.npmjs.org/"
   },
   "repository": {
     "type": "git",
-    "url": "git@gitlab.polarwin.cn:components/vue3-antdv-components.git"
+    "url": "git+ssh://git@github.com/ReganHe/vue3-antdv-components.git"
   },
   "keywords": [
     "vue3",
@@ -16,5 +25,21 @@
     "vitepress"
   ],
   "author": "heke",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.14.2",
+    "@vitejs/plugin-vue-jsx": "^4.0.0",
+    "sass": "1.59.3",
+    "vitepress": "^1.2.2"
+  },
+  "dependencies": {
+    "@ant-design/icons-vue": "^6.1.0",
+    "@vitepress-demo-preview/component": "^2.3.2",
+    "@vitepress-demo-preview/plugin": "^1.2.3",
+    "ant-design-vue": "4.2.1"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  }
 }

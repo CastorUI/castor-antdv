@@ -1,0 +1,131 @@
+{
+  "compilerOptions": {
+    /* 一.基本选项 */
+    /**
+     * 指定ECMAScript目标版本 "ES3"（默认）
+     * "ES5"， "ES6"/ "ES2015"， "ES2016"， "ES2017"或 "ESNext"
+     */
+    "target": "esnext",
+    /**
+     * 指定生成哪个模块系统代码：
+     * "None"， "CommonJS"， "AMD"， "System"， "UMD"， "ES6"或 "ES2015"
+     */
+    "module": "esnext",
+    /**
+     * 编译过程中需要引入的库文件的列表
+     * 可能的值为：
+     * ► ES5
+     * ► ES6
+     * ► ES2015
+     * ► ES7
+     * ► ES2016
+     * ► ES2017
+     * ► ES2018
+     * ► ESNext
+     * ► DOM
+     * ► DOM.Iterable
+     * ► WebWorker
+     * ► ScriptHost
+     * ► ES2015.Core
+     * ► ES2015.Collection
+     * ► ES2015.Generator
+     * ► ES2015.Iterable
+     * ► ES2015.Promise
+     * ► ES2015.Proxy
+     * ► ES2015.Reflect
+     * ► ES2015.Symbol
+     * ► ES2015.Symbol.WellKnown
+     * ► ES2016.Array.Include
+     * ► ES2017.object
+     * ► ES2017.Intl
+     * ► ES2017.SharedMemory
+     * ► ES2017.String
+     * ► ES2017.TypedArrays
+     * ► ES2018.Intl
+     * ► ES2018.Promise
+     * ► ES2018.RegExp
+     * ► ESNext.AsyncIterable
+     * ► ESNext.Array
+     * ► ESNext.Intl
+     * ► ESNext.Symbol
+     * 如果--lib没有指定默认注入的库的列表。默认注入的库为：
+     * ► 针对于--target ES5：DOM，ES5，ScriptHost
+     * ► 针对于--target ES6：DOM，ES6，DOM.Iterable，ScriptHost
+     */
+    "lib": ["dom", "esnext"],
+    "allowJs": true, // 是否允许编译javascript文件
+    "checkJs": true, // 是否在 JS 文件中报告错误
+    "jsx": "preserve", // 在 .tsx 文件里支持 JSX: 'preserve', 'react-native', or 'react'
+    "sourceMap": true, // 生成相应的 .map文件
+
+    /* 二. 类型检查 */
+    /**
+     * 启用所有严格类型检查选项
+     * 启用--strict相当于启用--noImplicitAny,--noImplicitThis,--alwaysStrict,--strictNullChecks,--strictFunctionTypes和--strictPropertyInitialization
+     */
+    "strict": true,
+    "noImplicitAny": false, // 不允许隐式的 any 类型
+    "noUnusedLocals": true, // 若有未使用的局部变量则抛错
+    "noUnusedParameters": true, // 若有未使用的参数则抛错
+    "forceConsistentCasingInFileNames": true, // 禁止对同一个文件的不一致的引用
+    "skipLibCheck": true, // 忽略对所有声明文件（ *.d.ts）的类型检查
+
+    /* 三. 模块解析 */
+    /**
+     * 解析非相对模块名的基准目录
+     * 如果配置了 "paths",则必须指定 "baseUrl" 值
+     */
+    "baseUrl": ".",
+    /**
+     * 模块名到基于 "baseUrl" 的路径映射的列表
+     */
+    "paths": {
+      "@/*": ["packages/*"],
+      "#/*": ["types/*"]
+    },
+    /**
+     * 要包含的类型声明文件名列表
+     * 如果指定了types，只有被列出来的包才会被包含进来
+     * 如果同时配置了 typeRoots 和 types，types 选项的设置将优先生效，即 TypeScript 编译器将根据typeRoots中包含的且 types 指定的文件来包含类型声明。
+     */
+    "types": ["vite/client"],
+    /**
+     * 要包含的类型声明文件路径列表
+     * 如果指定了typeRoots，只有typeRoots下面的包才会被包含进来
+     */
+    "typeRoots": ["./node_modules/@types/", "./types"],
+    /**
+     * 允许使用 import 导入 CommonJS 模块
+     * 通过创建命名空间实现 CommonJS 兼容性
+     */
+    "esModuleInterop": true,
+    /**
+     * 模块解析策略
+     * "node": 使用Node.js的模块解析策略。这是默认值。
+     * "classic": 使用TypeScript早期的模块解析策略，已废弃。
+     * "bundler": TypeScript在版本4.5中新增的一个模块解析策略。
+     */
+    "moduleResolution": "node", // 模块解析策略
+    "resolveJsonModule": true, // 自动解析JSON文件
+    "allowSyntheticDefaultImports": true // 允许从没有设置默认导出的模块中默认导入。这并不影响代码的输出，仅为了类型检查
+  },
+  /**
+   * "include"和"exclude"属性指定一个文件glob匹配模式列表。 支持的glob通配符有：
+   * 【*】 匹配0或多个字符（不包括目录分隔符）
+   * 【?】 匹配一个任意字符（不包括目录分隔符）
+   * 【**】 递归匹配任意子目录
+   * 使用"include"引入的文件可以使用"exclude"属性过滤。
+   */
+  "include": [
+    "docs/**/*.ts",
+    "docs/**/*.tsx",
+    "docs/**/*.vue",
+    "packages/**/*.ts",
+    "packages/**/*.tsx",
+    "packages/**/*.vue",
+    "types/**/*.d.ts",
+    "types/**/*.ts",
+    "vite.config.mts"
+, "docs/vite.config.mts"  ],
+  "exclude": ["node_modules", "dist", "**/*.js"]
+}
