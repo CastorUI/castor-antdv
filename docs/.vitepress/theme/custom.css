@@ -1,0 +1,10 @@
+.vp-doc table {
+  display: table;
+  border-collapse: separate;
+  margin: 0;
+}
+
+.vp-doc th, .vp-doc td {
+  border: 0;
+  padding: 8px 16px;
+}
