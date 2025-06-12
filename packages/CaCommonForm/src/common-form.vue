@@ -1,14 +1,13 @@
 <template>
   <div class="content" :style="(extendProps || {}).contentStyle">
     <a-spin :spinning="loading">
-      <div id="common-form">
+      <div id="common-form" style="overflow: hidden">
         <Form
           ref="formRef"
           :model="model"
           v-bind="elementProps"
           class="common-form-container"
           :style="{
-            overflow: 'hidden',
             padding: '0 16px 0 12px',
             ...elementProps.style
           }"
