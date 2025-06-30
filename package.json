@@ -1,7 +1,11 @@
 {
-  "name": "@neweratech/castor3-ui",
-  "version": "1.0.4",
+  "$schema": "https://json.schemastore.org/package.json",
+  "name": "@castor-ui/castor-antdv",
+  "version": "1.0.0",
   "description": "基于ant-design-vue的vue3组件库",
+  "publishConfig": {
+    "access": "public"
+  },
   "main": "es/index.js",
   "module": "es/index.js",
   "files": [
@@ -15,17 +19,13 @@
     "format": "prettier --write packages/,docs/demos/",
     "npmjs": "npm run build && npm publish --registry=https://registry.npmjs.org/"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@github.com/ReganHe/vue3-antdv-components.git"
-  },
   "keywords": [
     "vue3",
     "ant-design-vue",
     "vitepress"
   ],
   "author": "markhe",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "@types/node": "^20.14.2",
     "@vitejs/plugin-vue-jsx": "^4.0.0",
@@ -37,9 +37,5 @@
     "@vitepress-demo-preview/component": "^2.3.2",
     "@vitepress-demo-preview/plugin": "^1.2.3",
     "ant-design-vue": "4.2.6"
-  },
-  "publishConfig": {
-    "access": "public",
-    "registry": "https://registry.npmjs.org/"
   }
 }
