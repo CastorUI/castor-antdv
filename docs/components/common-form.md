@@ -24,6 +24,8 @@
 
 <preview path="../demos/common-form/loading/index.vue" title="" description=""></preview>
 
-## 禁用
+## 表单查看
+
+查看表单时，表单处于不可编辑状态。为了提升展示效果，统一转化为文本展示.
 
 <preview path="../demos/common-form/disabled/index.vue" title="" description=""></preview>
