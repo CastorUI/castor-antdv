@@ -29,8 +29,68 @@
       ...extendProps.formItemStyle
     }"
   >
+    <template
+      v-if="
+        [
+          'default',
+          'inputNumber',
+          'date',
+          'textArea',
+          'select',
+          'radioGroup',
+          'switch',
+          'checkboxGroup'
+        ].includes(type) && operateType === 'view'
+      "
+    >
+      <span
+        v-if="['select', 'radioGroup'].includes(type)"
+        v-bind="elementProps"
+        :style="{ width: '100%', whiteSpace: 'pre-line', ...elementProps.style }"
+      >
+        {{
+          ((elementProps.options || []).filter((r) => r.value === model[dataField])[0] || {})
+            .label || '暂无'
+        }}
+      </span>
+      <span
+        v-else-if="['switch'].includes(type)"
+        v-bind="elementProps"
+        :style="{ width: '100%', whiteSpace: 'pre-line', ...elementProps.style }"
+      >
+        {{
+          model[dataField] === null || model[dataField] === undefined
+            ? '暂无'
+            : model[dataField]
+            ? '是'
+            : '否'
+        }}
+      </span>
+      <span
+        v-else-if="['checkboxGroup'].includes(type)"
+        v-bind="elementProps"
+        :style="{ width: '100%', whiteSpace: 'pre-line', ...elementProps.style }"
+      >
+        {{
+          ((elementProps.options || []).filter((r) => model[dataField].includes(r.value)) || [])
+            .map((r) => r.label)
+            .join(' , ') || '暂无'
+        }}
+      </span>
+      <span
+        v-else
+        v-bind="elementProps"
+        :style="{ width: '100%', whiteSpace: 'pre-line', ...elementProps.style }"
+      >
+        {{
+          `${model[dataField] || (elementProps?.suffix ? ' - ' : '暂无')}${
+            elementProps?.suffix || ''
+          }`
+        }}
+      </span>
+    </template>
     <Select
-      v-if="type === 'select'"
+      v-else-if="type === 'select'"
       v-model:value="model[dataField]"
       placeholder="请选择"
       :disabled="
@@ -93,7 +153,9 @@
       :style="{ width: '100%', whiteSpace: 'pre-line', ...elementProps.style }"
     >
       {{
-        `${model[dataField] || (elementProps?.suffix ? ' - ' : '暂无')}${elementProps?.suffix || ''}`
+        `${model[dataField] || (elementProps?.suffix ? ' - ' : '暂无')}${
+          elementProps?.suffix || ''
+        }`
       }}
     </span>
     <Textarea
