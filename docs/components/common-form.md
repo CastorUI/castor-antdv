@@ -23,3 +23,7 @@
 ## 加载中
 
 <preview path="../demos/common-form/loading/index.vue" title="" description=""></preview>
+
+## 禁用
+
+<preview path="../demos/common-form/disabled/index.vue" title="" description=""></preview>
