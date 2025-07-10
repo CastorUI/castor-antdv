@@ -74,6 +74,7 @@ export interface FormField {
   | 'autocomplete'
   | 'switch'
   | 'space'
+  | 'image'
   | 'default'
   label: string
   dataField: string
@@ -114,6 +115,13 @@ export interface FormFieldExtendProps {
   showInFooter?: boolean
   /** 分值标题-副标题 */
   subTitle?: string
+  /** 图片选项 */
+  imageOptions?: {
+    width?: string
+    height?: string
+    radius?: string
+    style?: Object
+  }
 }
 
 /** 通用表单 */
