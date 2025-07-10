@@ -20,6 +20,10 @@
 
 <preview path="../demos/common-table/status-column/index.vue" title="" description=""></preview>
 
+## 图片列
+
+<preview path="../demos/common-table/image-column/index.vue" title="" description=""></preview>
+
 ## 操作列
 
 <preview path="../demos/common-table/row-commands/index.vue" title="" description=""></preview>

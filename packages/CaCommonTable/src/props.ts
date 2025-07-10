@@ -1,5 +1,6 @@
 import { TablePaginationConfig } from 'ant-design-vue/es/table';
-import { CommonCommand, TableField } from '/#/castor-antd';
+import type { CommonCommand, TableField } from '#/castor-antd';
+import type { PropType } from 'vue';
 
 export const commonTableProps = {
   loading: {

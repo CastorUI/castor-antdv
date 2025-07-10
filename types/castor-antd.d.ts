@@ -26,7 +26,7 @@ export interface SelectItem {
 
 /** 通用表格字段 */
 export interface TableField {
-  type: 'index' | 'link' | 'custom' | 'commands' | 'status' | 'default'
+  type: 'index' | 'link' | 'custom' | 'commands' | 'status' | 'image' | 'default'
   label: string
   dataField: string
   elementProps?: Object
@@ -34,7 +34,8 @@ export interface TableField {
     options?: Array<SelectItem>
     commands?: Array<CommonCommand>
     linkCommand?: string
-    componentKey?: string
+    componentKey?: string,
+    subElementProps?: object
   }
 }
 
@@ -56,24 +57,24 @@ export interface QueryField {
 /** 通用表单字段 */
 export interface FormField {
   type:
-    | 'text'
-    | 'select'
-    | 'date'
-    | 'dateRange'
-    | 'time'
-    | 'timeRange'
-    | 'textArea'
-    | 'groupTitle'
-    | 'checkboxGroup'
-    | 'radioGroup'
-    | 'custom'
-    | 'upload'
-    | 'status'
-    | 'inputNumber'
-    | 'autocomplete'
-    | 'switch'
-    | 'space'
-    | 'default'
+  | 'text'
+  | 'select'
+  | 'date'
+  | 'dateRange'
+  | 'time'
+  | 'timeRange'
+  | 'textArea'
+  | 'groupTitle'
+  | 'checkboxGroup'
+  | 'radioGroup'
+  | 'custom'
+  | 'upload'
+  | 'status'
+  | 'inputNumber'
+  | 'autocomplete'
+  | 'switch'
+  | 'space'
+  | 'default'
   label: string
   dataField: string
   columnSpan: number

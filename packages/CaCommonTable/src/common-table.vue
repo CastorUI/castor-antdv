@@ -56,6 +56,7 @@ import { commonTableProps } from './props'
 import CommandColumn from './components/CommandColumn.vue'
 import StatusColumn from './components/StatusColumn.vue'
 import LinkColumn from './components/LinkColumn.vue'
+import ImageColumn from './components/ImageColumn.vue'
 import ComponentColumn from './components/ComponentColumn.vue'
 import { handleCommand } from './../../hooks/useCommand'
 // 设置table的sticky（粘性头部和滚动条）
@@ -99,6 +100,21 @@ const antColumns = computed<any>(() =>
                 record={record}
                 index={index}
                 elementProps={r.elementProps}
+              />
+            )
+          },
+          ...r.elementProps
+        }
+      case 'image':
+        return {
+          title: r.label,
+          customRender: ({ record, index }) => {
+            return (
+              <ImageColumn
+                dataField={r.dataField}
+                record={record}
+                index={index}
+                elementProps={r.extendProps?.subElementProps}
               />
             )
           },
