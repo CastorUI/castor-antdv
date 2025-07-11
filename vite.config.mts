@@ -1,6 +1,9 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx'
+import dts from 'vite-plugin-dts'
+import fs from 'fs-extra'
+
 export default defineConfig({
   build: {
     target: 'modules',
@@ -32,5 +35,21 @@ export default defineConfig({
       formats: ['es']
     }
   },
-  plugins: [vue(), vueJsx()]
+  plugins: [
+    vue(),
+    vueJsx(),
+    dts({
+      include: ['packages/**/*.ts', 'packages/**/*.tsx', 'packages/**/*.vue', 'types/**/*.d.ts'],
+      outDir: 'es',
+      staticImport: true,
+      insertTypesEntry: true,
+    }),
+    // 复制types文件夹中的声明文件到es目录
+    {
+      name: 'copy-dts',
+      closeBundle() {
+        fs.copySync('types', 'es/types')
+      }
+    }
+  ]
 })
