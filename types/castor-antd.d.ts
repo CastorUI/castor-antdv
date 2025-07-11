@@ -19,7 +19,7 @@ export interface CommonCommand {
 
 export interface SelectItem {
   label: string
-  value: string | number
+  value: string | number | boolean
   disabled?: boolean
   color?: string
 }
