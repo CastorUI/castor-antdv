@@ -59,7 +59,8 @@ export default defineConfig({
   description: ' Vue3 Component Library Based On AntDedignVue',
   head: [['link', { rel: 'icon', href: '/favicon.ico' }]],
   lang: 'zh-CN',
-  base: '/',
+  base: '/castor-antdv-help/',
+  outDir: './../castor-antdv-help',
   lastUpdated: true,
   themeConfig: {
     i18nRouting: true,
