@@ -1,8 +1,9 @@
 {
   "$schema": "https://json.schemastore.org/package.json",
   "name": "@castor-ui/castor-antdv",
-  "version": "1.0.3",
+  "version": "1.0.6",
   "description": "基于ant-design-vue的vue3组件库",
+  "homepage": "https://castorui.github.io/castor-antdv-help/",
   "repository": {
     "type": "git",
     "url": "https://github.com/CastorUI/castor-antdv"
@@ -12,6 +13,8 @@
   },
   "main": "es/index.js",
   "module": "es/index.js",
+  "types": "es/types/index.d.ts",
+  "typings": "es/types/index.d.ts",
   "files": [
     "es"
   ],
@@ -33,7 +36,9 @@
   "devDependencies": {
     "@types/node": "^20.14.2",
     "@vitejs/plugin-vue-jsx": "^4.0.0",
+    "fs-extra": "^11.2.0",
     "sass": "1.59.3",
+    "vite-plugin-dts": "^4.5.4",
     "vitepress": "^1.2.2"
   },
   "dependencies": {
