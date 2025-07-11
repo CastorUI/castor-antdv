@@ -3,6 +3,7 @@
   "name": "@castor-ui/castor-antdv",
   "version": "1.0.4",
   "description": "基于ant-design-vue的vue3组件库",
+  "homepage": "https://castorui.github.io/castor-antdv-help/",
   "repository": {
     "type": "git",
     "url": "https://github.com/CastorUI/castor-antdv"
