@@ -127,6 +127,21 @@ const fields = computed<Array<FormField>>(() => {
       columnSpan: 2
     },
     {
+      type: 'image',
+      label: '头像',
+      dataField: 'avatar',
+      columnSpan: 2,
+      elementProps: {
+        imageOptions: {
+          width: '100px',
+          height: '100px',
+          style: {
+            border: '1px solid #ccc'
+          }
+        }
+      }
+    },
+    {
       type: 'space',
       label: '',
       dataField: '',
@@ -198,7 +213,8 @@ const form = reactive<CommonForm>({
     userDate: '',
     userEnabled: true,
     address: '长江路555号',
-    equipment: []
+    equipment: [],
+    avatar: 'https://q2.itc.cn/q_70/images03/20241013/47ff05019e93455abd85cd47612fbf7b.jpeg'
   },
   fields,
   commands: [

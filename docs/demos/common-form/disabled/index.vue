@@ -68,14 +68,12 @@ const fields = computed<Array<FormField>>(() => {
       label: '姓名',
       dataField: 'name',
       columnSpan: 1,
-      disableValidator: () => true
     },
     {
       type: 'select',
       label: '用户性别',
       dataField: 'sex',
       columnSpan: 1,
-      disableValidator: () => true,
       elementProps: {
         options: optionsMap['sex']
       }
@@ -85,14 +83,12 @@ const fields = computed<Array<FormField>>(() => {
       label: '年龄',
       dataField: 'age',
       columnSpan: 1,
-      disableValidator: () => true
     },
     {
       type: 'date',
       label: '年份',
       dataField: 'userYear',
       columnSpan: 1,
-      disableValidator: () => true,
       elementProps: {
         picker: 'year',
         valueFormat: 'YYYY'
@@ -103,7 +99,6 @@ const fields = computed<Array<FormField>>(() => {
       label: '月份',
       dataField: 'userMonth',
       columnSpan: 1,
-      disableValidator: () => true,
       elementProps: {
         picker: 'month',
         valueFormat: 'YYYY-MM'
@@ -114,7 +109,6 @@ const fields = computed<Array<FormField>>(() => {
       label: '日期',
       dataField: 'userDate',
       columnSpan: 1,
-      disableValidator: () => true,
       elementProps: {
         picker: 'date',
         valueFormat: 'YYYY-MM-DD'
@@ -125,14 +119,25 @@ const fields = computed<Array<FormField>>(() => {
       label: '是否启用',
       dataField: 'userEnabled',
       columnSpan: 1,
-      disableValidator: () => true
     },
     {
       type: 'textArea',
       label: '地址',
       dataField: 'address',
       columnSpan: 2,
-      disableValidator: () => true
+    },
+    {
+      type: 'image',
+      label: '头像',
+      dataField: 'avatar',
+      columnSpan: 2,
+      elementProps: {
+        imageOptions: {
+          width: '100px',
+          height: '100px',
+          radius: '50%'
+        }
+      }
     },
     {
       type: 'space',
@@ -157,7 +162,6 @@ const fields = computed<Array<FormField>>(() => {
       label: '主打产品',
       dataField: 'equipment',
       columnSpan: 1,
-      disableValidator: () => true,
       elementProps: {
         options: optionsMap['equipment']
       }
@@ -167,7 +171,6 @@ const fields = computed<Array<FormField>>(() => {
       label: '用户性别',
       dataField: 'sex',
       columnSpan: 1,
-      disableValidator: () => true,
       elementProps: {
         options: optionsMap['sex']
       }
@@ -208,7 +211,8 @@ const form = reactive<CommonForm>({
     userDate: '2025-05-10',
     userEnabled: true,
     address: '长江路555号',
-    equipment: ['double', 'remote']
+    equipment: ['double', 'remote'],
+    avatar: 'https://q2.itc.cn/q_70/images03/20241013/47ff05019e93455abd85cd47612fbf7b.jpeg'
   },
   fields,
   commands: [
