@@ -1,6 +1,6 @@
 <template>
   <div class="content" :style="(extendProps || {}).contentStyle">
-    <a-spin :spinning="loading">
+    <Spin :spinning="loading">
       <div id="common-form" style="overflow: hidden">
         <Form
           ref="formRef"
@@ -31,7 +31,7 @@
           />
         </Form>
       </div>
-    </a-spin>
+    </Spin>
   </div>
   <div
     class="footer"
@@ -77,7 +77,7 @@
 </template>
 
 <script lang="tsx" setup name="CaCommonForm">
-import { Form, Button } from 'ant-design-vue'
+import { Form, Button, Spin } from 'ant-design-vue'
 import { computed, nextTick, ref, onMounted } from 'vue'
 import FormCtrl from './components/FormCtrl.vue'
 import { commonFormProps } from './props'
