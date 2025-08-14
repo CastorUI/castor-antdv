@@ -237,12 +237,12 @@
       v-bind="elementProps"
       :style="elementProps.style"
     />
-    <Tooltip v-else-if="type === 'image'" placement="bottom" :title="isDisabledRef ? '' : '点击上传图片'">
-      <Upload
-        :showUploadList="false"
-        :disabled="isDisabledRef"
-        v-bind="elementProps"
-      >
+    <Tooltip
+      v-else-if="type === 'image'"
+      placement="bottom"
+      :title="isDisabledRef ? '' : '点击上传图片'"
+    >
+      <Upload :showUploadList="false" :disabled="isDisabledRef" v-bind="elementProps">
         <div class="ant-upload-wrapper">
           <img
             :src="model[dataField] || defaultAvatarUrl"
@@ -267,6 +267,7 @@
       placeholder="请输入"
       v-bind="elementProps"
       :style="{ width: '100%', ...elementProps.style }"
+      @blur="() => handleBlur(dataField)"
     >
       <template v-if="extendProps && extendProps.beforeText" #addonBefore>
         <span>{{ extendProps.beforeText }}</span>
@@ -297,6 +298,8 @@ import {
 } from 'ant-design-vue'
 import { FormFieldExtendProps } from '#/castor-antd'
 import { Rule } from 'ant-design-vue/es/form/interface'
+
+const emit = defineEmits(['blur'])
 const props = defineProps({
   type: {
     type: String,
@@ -357,6 +360,10 @@ const props = defineProps({
   validateInfos: {
     type: Object,
     default: () => {}
+  },
+  validate: {
+    type: Function,
+    default: undefined
   }
 })
 
@@ -371,4 +378,14 @@ const isDisabledRef = computed(() => {
       props.disableValidator({ model: props.defaultModel, operateType: props.operateType }))
   )
 })
+
+const handleBlur = (dataField: string) => {
+  console.log('FormCtrl handleBlur for field:', dataField)
+  if (props.validate) {
+    console.log('validate function exists')
+    props.validate(dataField, { trigger: 'blur' }).catch(() => {})
+  }else{
+    console.log('validate function does not exist')
+  }
+}
 </script>
