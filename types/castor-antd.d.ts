@@ -29,7 +29,7 @@ export interface TableField {
   type: 'index' | 'link' | 'custom' | 'commands' | 'status' | 'image' | 'default'
   label: string
   dataField: string
-  elementProps?: Object
+  elementProps?: object
   extendProps?: {
     options?: Array<SelectItem>
     commands?: Array<CommonCommand>
