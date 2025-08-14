@@ -3,6 +3,21 @@ import CaCommonTable from './CaCommonTable'
 import CaCommonQuery from './CaCommonQuery'
 import CaCommonForm from './CaCommonForm'
 
+// 导出类型定义
+export type {
+  CommonTable,
+  CommonForm,
+  CommonQuery,
+  TableField,
+  QueryField,
+  FormField,
+  CommonCommand,
+  SelectItem,
+  FormExtendProps,
+  FormFieldExtendProps,
+  CommonSorter
+} from '../types/castor-antd'
+
 // 存储组件列表
 const components = { CaCommonTable, CaCommonQuery, CaCommonForm }
 

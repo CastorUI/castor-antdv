@@ -39,7 +39,7 @@ export const commonQueryProps = {
     default: 'right'
   },
   defaultCheckedKeys: {
-    type: Array as PropType<Number[] | String[]>,
+    type: Array as PropType<number[] | string[]>,
     default: () => []
   },
   emitRegister: {
