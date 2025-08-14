@@ -1,7 +1,7 @@
 {
   "$schema": "https://json.schemastore.org/package.json",
   "name": "@castor-ui/castor-antdv",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "基于ant-design-vue的vue3组件库",
   "homepage": "https://castorui.github.io/castor-antdv-help/",
   "repository": {
