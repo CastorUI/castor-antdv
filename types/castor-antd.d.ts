@@ -13,7 +13,7 @@ export interface CommonCommand {
   loading?: boolean
   disableValidator?: Function
   visibleValidator?: Function
-  elementProps?: ButtonProps & { style?: Object }
+  elementProps?: ButtonProps & { style?: object }
   canKeyDown?: boolean
 }
 
@@ -47,10 +47,10 @@ export interface QueryField {
   columnSpan: number
   disableValidator?: Function
   visibleValidator?: Function
-  elementProps?: Object
+  elementProps?: object
   extendProps?: {
     formItemProps?: FormItemProps
-    formItemStyle?: Object
+    formItemStyle?: object
   }
 }
 
@@ -82,16 +82,16 @@ export interface FormField {
   rules?: Array<Rule>
   disableValidator?: Function
   visibleValidator?: Function
-  elementProps?: Object
+  elementProps?: object
   extendProps?: FormFieldExtendProps
 }
 
 /** 通用表单-扩展属性 */
 export interface FormExtendProps {
   /** 内容样式 */
-  contentStyle?: Object
+  contentStyle?: object
   /** 底部样式 */
-  footerStyle?: Object
+  footerStyle?: object
 }
 
 /** 通用表单字段-扩展属性 */
@@ -99,7 +99,7 @@ export interface FormFieldExtendProps {
   /** FormItem属性 */
   formItemProps?: FormItemProps
   /** FormItem样式 */
-  formItemStyle?: Object
+  formItemStyle?: object
   /** 自定义组件名 */
   componentKey?: string
   /** 分组标题 */
@@ -120,7 +120,7 @@ export interface FormFieldExtendProps {
     width?: string
     height?: string
     radius?: string
-    style?: Object
+    style?: object
   }
 }
 
@@ -134,14 +134,14 @@ export interface CommonForm {
   model: any
   fields: ComputedRef<FormField[]>
   commands?: Array<CommonCommand>
-  elementProps?: FormProps & { style?: Object }
+  elementProps?: FormProps & { style?: object }
   extendProps?: FormExtendProps
   emitRegister?: { [key: string]: Function } & {
     validate?: <T = any>(names?: string | string[], option?: validateOptions) => Promise<T>
     clearValidate?: (names?: string | string[]) => void
     resetFields?: (newValues?: { [key: string]: any }) => void
   }
-  customComponents?: Object
+  customComponents?: object
   // 自定义组件校验函数名
   customValidators?: Array<any>
 }
@@ -150,14 +150,14 @@ export interface CommonForm {
 export interface CommonTable {
   loading: boolean
   title?: string
-  dataSource: Array<Object>
+  dataSource: Array<object>
   columns: ComputedRef<TableField[]>
   pagination: false | TablePaginationConfig
   sorter?: CommonSorter
   addCommand?: CommonCommand
   elementProps?: TableProps
-  emitRegister?: Object
-  customComponents?: Object
+  emitRegister?: object
+  customComponents?: object
   customCommands?: Array<CommonCommand>
 }
 
