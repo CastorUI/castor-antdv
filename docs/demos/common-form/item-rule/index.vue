@@ -69,7 +69,7 @@ const fields = computed<Array<FormField>>(() => {
       label: '姓名',
       dataField: 'name',
       columnSpan: 1,
-      rules: [{ required: true, message: '不能为空' }]
+      rules: [{ required: true, message: '不能为空', trigger: 'blur' }]
     },
     {
       type: 'select',
@@ -193,7 +193,7 @@ const form = reactive<CommonForm>({
   operateType: 'add',
   model: {
     code: '1001',
-    name: '张三',
+    name: '',
     sex: null,
     age: 18,
     userYear: '',

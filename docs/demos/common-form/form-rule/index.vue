@@ -188,7 +188,7 @@ const handleCancel = ({ command }) => {
 }
 
 const rules: Record<string, Rule[]> = {
-  name: [{ required: true, message: '不能为空' }],
+  name: [{ required: true, message: '不能为空', trigger: 'blur' }],
   sex: [{ required: true, message: '不能为空' }]
 }
 
@@ -197,7 +197,7 @@ const form = reactive<CommonForm>({
   operateType: 'add',
   model: {
     code: '1001',
-    name: '张三',
+    name: '',
     sex: null,
     age: 18,
     userYear: '',
