@@ -2,7 +2,7 @@
 
 ## 项目简介
 
-基于antdv的组件库，用于快速开发中后台系统。
+基于 antdv 的组件库，用于快速开发中后台系统。
 
 ## 安装
 
@@ -15,27 +15,13 @@ npm install @castor-ui/castor-antdv --save
 ### 全局引入
 
 ```js
-import { createApp } from 'vue';
-import CastorAntdv from '@castor-ui/castor-antdv';
-import App from './App.vue';
+import { createApp } from 'vue'
+import CastorAntdv from '@castor-ui/castor-antdv'
+import App from './App.vue'
 
-const app = createApp(App);
-app.use(CastorAntdv);
-app.mount('#app');
-```
-
-### 按需引入
-
-```js
-import { CaCommonTable, CaCommonForm, CaCommonQuery } from '@castor-ui/castor-antdv';
-
-export default {
-  components: {
-    CaCommonTable,
-    CaCommonForm,
-    CaCommonQuery
-  }
-}
+const app = createApp(App)
+app.use(CastorAntdv)
+app.mount('#app')
 ```
 
 ## 项目结构

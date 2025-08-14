@@ -1,24 +1,35 @@
-import { App } from 'vue';
-import { CommonTable, CommonForm, CommonQuery } from './castor-antd';
-import CaCommonTable from '../packages/CaCommonTable';
-import CaCommonForm from '../packages/CaCommonForm';
-import CaCommonQuery from '../packages/CaCommonQuery';
-
-declare const CastorAntdv: {
-  version: string;
-  install: (app: App) => void;
-  CaCommonTable: typeof CaCommonTable;
-  CaCommonForm: typeof CaCommonForm;
-  CaCommonQuery: typeof CaCommonQuery;
-};
-
-export {
-  CaCommonTable,
-  CaCommonForm,
-  CaCommonQuery,
+import { App } from 'vue'
+import {
   CommonTable,
   CommonForm,
-  CommonQuery
-};
+  CommonQuery,
+  TableField,
+  QueryField,
+  FormField,
+  CommonCommand,
+  SelectItem,
+  FormExtendProps,
+  FormFieldExtendProps,
+  CommonSorter
+} from './castor-antd'
 
-export default CastorAntdv; 
+declare const CastorAntdv: {
+  version: string
+  install: (app: App) => void
+}
+
+export {
+  CommonTable,
+  CommonForm,
+  CommonQuery,
+  TableField,
+  QueryField,
+  FormField,
+  CommonCommand,
+  SelectItem,
+  FormExtendProps,
+  FormFieldExtendProps,
+  CommonSorter
+}
+
+export default CastorAntdv
