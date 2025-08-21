@@ -6,7 +6,7 @@
 
 <script lang="ts" setup>
 import { computed, reactive } from 'vue'
-import { CommonTable, SelectItem, TableField } from '#/castor-antd'
+import { CommonTable, SelectItem, TableField } from '#/castor-antdv'
 
 const optionsMap = reactive<Record<string, SelectItem[]>>({
   status: [

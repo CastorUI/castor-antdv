@@ -7,7 +7,7 @@
 <script lang="ts" setup>
 import { computed, reactive, shallowRef } from 'vue'
 import CustomInfo from './components/CustomInfo.vue'
-import { CommonTable, TableField } from '#/castor-antd'
+import { CommonTable, TableField } from '#/castor-antdv'
 
 const columns = computed<Array<TableField>>(() => {
   return [

@@ -6,7 +6,7 @@
 
 <script lang="ts" setup>
 import { computed, reactive } from 'vue'
-import { CommonQuery, QueryField } from '#/castor-antd'
+import { CommonQuery, QueryField } from '#/castor-antdv'
 
 const fields = computed<Array<QueryField>>(() => {
   return [

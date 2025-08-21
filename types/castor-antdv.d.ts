@@ -1,4 +1,4 @@
-import { ComputedRef } from 'vue'
+import { App, ComputedRef } from 'vue'
 import { Rule } from 'ant-design-vue/es/form/interface'
 import { FormProps } from 'ant-design-vue/es/form/Form'
 import { FormItemProps } from 'ant-design-vue/es/form/FormItem'
@@ -176,4 +176,17 @@ export interface CommonQuery {
 export interface CommonSorter {
   sortField: string
   sortOrder: 'ascend' | 'decend'
+}
+
+export type TFunc = (key: string, values?: Record<string, any>) => string
+
+/** CastorAntdv 插件 i18n 选项（应用内传入，仅声明类型，不导出实现） */
+export interface CastorAntdvI18nOptions {
+  t: TFunc
+  locale?: 'zh-CN' | 'en-US'
+}
+
+/** CastorAntdv 插件 options */
+export interface CastorAntdvOptions {
+  i18n?: CastorAntdvI18nOptions
 }

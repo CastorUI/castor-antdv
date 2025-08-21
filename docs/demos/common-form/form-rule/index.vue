@@ -8,7 +8,7 @@
 import { message } from 'ant-design-vue'
 import { Rule } from 'ant-design-vue/es/form/interface'
 import { computed, reactive } from 'vue'
-import { CommonForm, FormField } from '#/castor-antd'
+import { CommonForm, FormField } from '#/castor-antdv'
 
 const optionsMap = reactive({
   sex: [

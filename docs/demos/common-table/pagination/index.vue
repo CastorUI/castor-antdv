@@ -6,7 +6,7 @@
 
 <script lang="ts" setup>
 import { computed, reactive } from 'vue'
-import { CommonTable, TableField } from '#/castor-antd'
+import { CommonTable, TableField } from '#/castor-antdv'
 
 const columns = computed<Array<TableField>>(() => {
   return [
@@ -51,7 +51,7 @@ const getList = () => {
   setTimeout(() => {
     const baseIndex =
       (((table.pagination || {}).current || 1) - 1) * ((table.pagination || {}).pageSize || 10)
-    let tableList: Array<Object> = []
+    let tableList: Array<object> = []
     for (let i = 1; i <= ((table.pagination || {}).pageSize || 10); i++) {
       tableList.push({
         id: baseIndex + i,

@@ -6,7 +6,7 @@
 
 <script lang="ts" setup>
 import { reactive, computed } from 'vue'
-import { CommonTable, TableField } from '#/castor-antd'
+import { CommonTable, TableField } from '#/castor-antdv'
 
 const columns = computed<Array<TableField>>(() => {
   return [

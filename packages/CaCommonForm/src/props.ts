@@ -1,4 +1,4 @@
-import { CommonCommand, FormField } from '#/castor-antd'
+import { CommonCommand, FormField } from '#/castor-antdv'
 import { PropType } from 'vue'
 
 export const commonFormProps = {

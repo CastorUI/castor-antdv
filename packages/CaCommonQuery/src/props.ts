@@ -1,4 +1,4 @@
-import { CommonCommand, QueryField } from '#/castor-antd'
+import { CommonCommand, QueryField } from '#/castor-antdv'
 import { PropType } from 'vue'
 
 export const commonQueryProps = {

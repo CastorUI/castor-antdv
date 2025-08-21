@@ -6,7 +6,7 @@
 
 <script lang="ts" setup>
 import { computed, reactive } from 'vue'
-import { CommonForm, FormField } from '#/castor-antd'
+import { CommonForm, FormField } from '#/castor-antdv'
 
 const optionsMap = reactive({
   sex: [

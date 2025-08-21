@@ -6,7 +6,7 @@
 
 <script lang="ts" setup>
 import { computed, reactive, shallowRef } from 'vue'
-import { CommonForm, FormField } from '#/castor-antd'
+import { CommonForm, FormField } from '#/castor-antdv'
 import CustomTable from './components/CustomTable.vue'
 
 const optionsMap = reactive({

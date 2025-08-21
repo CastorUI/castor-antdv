@@ -8,7 +8,7 @@
     <Select
       v-if="type === 'select'"
       v-model:value="model[dataField]"
-      placeholder="请选择"
+  :placeholder="t('common.selectPlaceholder')"
       :disabled="disableValidator && disableValidator({ model })"
       :allow-clear="true"
       v-bind="elementProps"
@@ -16,7 +16,7 @@
     <DatePicker
       v-else-if="type === 'date'"
       v-model:value="model[dataField]"
-      placeholder="请选择"
+  :placeholder="t('common.selectPlaceholder')"
       :disabled="disableValidator && disableValidator({ model })"
       :allow-clear="true"
       v-bind="elementProps"
@@ -31,7 +31,7 @@
     <TimePicker
       v-else-if="type === 'time'"
       v-model:value="model[dataField]"
-      placeholder="请选择"
+  :placeholder="t('common.selectPlaceholder')"
       :disabled="disableValidator && disableValidator({ model })"
       :allow-clear="true"
       v-bind="elementProps"
@@ -46,7 +46,7 @@
     <Input
       v-else
       v-model:value="model[dataField]"
-      placeholder="请输入"
+  :placeholder="t('common.inputPlaceholder')"
       :disabled="disableValidator && disableValidator({ model })"
       v-bind="elementProps"
       @pressEnter="handleInputEnter"
@@ -65,6 +65,7 @@ import {
   TimePicker,
   TimeRangePicker
 } from 'ant-design-vue'
+import { useI18n } from '../../../hooks/useI18n'
 const props = defineProps({
   type: {
     type: String,
@@ -111,6 +112,7 @@ const props = defineProps({
 const emits = defineEmits(['enterKeyDown'])
 
 const model = computed(() => props.defaultModel)
+const { t } = useI18n()
 
 // input回车
 const handleInputEnter = () => {

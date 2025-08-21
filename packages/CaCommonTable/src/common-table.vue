@@ -42,7 +42,15 @@
     :scroll="{
       x: '100%'
     }"
-    :pagination="pagination === false ? false : { showSizeChanger: true, showTotal: (total: number) => `共 ${total} 条`, ...pagination }"
+    :pagination="
+      pagination === false
+        ? false
+        : {
+            showSizeChanger: true,
+            showTotal: (total: number) => t('table.total', undefined, { total }),
+            ...pagination
+          }
+    "
     v-bind="elementProps"
     :sticky="tableSticky"
   />
@@ -59,6 +67,7 @@ import LinkColumn from './components/LinkColumn.vue'
 import ImageColumn from './components/ImageColumn.vue'
 import ComponentColumn from './components/ComponentColumn.vue'
 import { handleCommand } from './../../hooks/useCommand'
+import { useI18n } from '../../hooks/useI18n'
 // 设置table的sticky（粘性头部和滚动条）
 let tableSticky = ref()
 onMounted(() => {
@@ -68,6 +77,7 @@ onMounted(() => {
 })
 
 const props = defineProps(commonTableProps)
+const { t } = useI18n()
 const handleEmit = (event: string, args?: object) => {
   handleCommand(props.emitRegister, event, args)
 }
