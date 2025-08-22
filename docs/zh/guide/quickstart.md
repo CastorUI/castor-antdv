@@ -1,22 +1,22 @@
 ---
-title: Quick Start
+title: 快速开始
 ---
 
-# Quick Start
+# 快速开始
 
-This page walks you through installation, styles, global/on-demand usage, i18n integration and minimal examples.
+本页将引导你完成安装、样式引入、全局/按需用法、i18n 接入，以及三个核心组件的最小示例。
 
-## Install
+## 安装
 
 ```bash
 npm i @castor-ui/castor-antdv ant-design-vue
 ```
 
-> The component library depends on Ant Design Vue 4.x and Vue3.
+> 组件库依赖 Ant Design Vue 4.x 与 Vue3。
 
-## Basic usage
+## 基础使用
 
-After global registration, you can directly use the three components in the template:
+全局注册后即可直接在模板中使用三大组件：
 
 ```ts
 // main.ts
@@ -35,9 +35,9 @@ app.use(CastorAntdv)
 app.mount('#app')
 ```
 
-## On-demand
+## 按需引入
 
-You can also import only the components you need:
+也可以仅引入需要的组件：
 
 ```ts
 import { createApp } from 'vue'
@@ -54,35 +54,35 @@ app.component('CaCommonQuery', CaCommonQuery)
 app.component('CaCommonForm', CaCommonForm)
 ```
 
-## i18n
+## i18n 接入（可选）
 
-The component library supports passing in the project's t function and locale:
+组件库支持传入项目内的 t 函数与 locale：
 
 ```ts
 import { createApp } from 'vue'
 import CastorAntdv, { setCastorAntdvLocale, provideI18n } from '@castor-ui/castor-antdv'
 
-// Example with vue-i18n (pseudo code)
+// 以 vue-i18n 为例（伪代码）
 // const i18n = createI18n({ legacy: false, locale: 'en-US', messages })
 
 createApp(App)
   // .use(i18n)
   .use(CastorAntdv, {
     i18n: {
-      // t: i18n.global.t, // Pass in your t function
-      locale: 'en-US'      // Optional, default is zh-CN
+      // t: i18n.global.t, // 传入你的 t 函数
+      locale: 'en-US'      // 可选，默认 zh-CN
     }
   })
   .mount('#app')
 
-// Can also be done at runtime:
+// 运行时也可：
 // provideI18n(app, i18n.global.t)
 // setCastorAntdvLocale('zh-CN')
 ```
 
-## Minimal examples
+## 最小示例
 
-Here are the minimal runnable examples of the three core components, with types coming from the package definition for complete type hinting.
+下面给出三个核心组件的最小可运行示例，类型均来自包内定义，便于获得完整的类型提示。
 
 ### 通用表格 CaCommonTable
 
